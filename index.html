@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download TikTok Tanpa Watermark</title>
+  <meta name="description" content="Download video TikTok tanpa watermark dengan cepat dan mudah">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Download TikTok Tanpa Watermark</h1>
+      <p class="tagline">Unduh video TikTok dalam 1 klik!</p>
+    </header>
+
+    <main>
+      <div class="input-group">
+        <input 
+          type="text" 
+          id="tiktok-url" 
+          placeholder="Tempel link TikTok di sini..." 
+          aria-label="Link TikTok"
+        >
+        <button id="download-btn">
+          <span class="btn-text">Download Sekarang</span>
+          <span class="btn-icon">↓</span>
+        </button>
+      </div>
+
+      <div class="status">
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+          <p>Memproses video...</p>
+        </div>
+        <div class="error" id="error" role="alert"></div>
+      </div>
+
+      <div class="result" id="result">
+        <div class="video-container">
+          <video controls id="video-preview" playsinline></video>
+        </div>
+        <div class="download-buttons">
+          <a href="#" class="btn-download no-wm" id="download-nowm" download>
+            <span>Tanpa Watermark</span>
+          </a>
+          <a href="#" class="btn-download original" id="download-original" download>
+            <span>Versi Original</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="instructions">
+        <h2>📌 Cara Download</h2>
+        <ol>
+          <li>Buka TikTok dan copy link video</li>
+          <li>Tempel link di atas</li>
+          <li>Klik <strong>Download Sekarang</strong></li>
+          <li>Pilih versi yang diinginkan</li>
+        </ol>
+        <div class="note">
+          <p>⚡ Video diambil langsung dari TikTok. <br> Kami tidak menyimpan data Anda.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> Mahendra devolever</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
