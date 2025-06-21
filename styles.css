@@ -1,0 +1,269 @@
+:root {
+  --primary: #fe2c55;
+  --secondary: #25f4ee;
+  --accent: #7e57c2;
+  --dark: #161823;
+  --light: #ffffff;
+  --gray: #f1f1f2;
+  --error: #ff4d4f;
+}
+
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background-color: #fafafa;
+  color: var(--dark);
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: var(--light);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Header */
+header {
+  padding: 24px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.tagline {
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+/* Main Content */
+main {
+  padding: 24px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: all 0.3s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(254, 44, 85, 0.2);
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background: var(--primary);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: #e41e48;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(254, 44, 85, 0.3);
+}
+
+/* Status Elements */
+.status {
+  min-height: 60px;
+}
+
+.loading {
+  display: none;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error {
+  display: none;
+  background: #fff2f0;
+  color: var(--error);
+  padding: 14px;
+  border-radius: 10px;
+  margin: 16px 0;
+  border: 1px solid #ffccc7;
+  text-align: center;
+}
+
+/* Result Section */
+.result {
+  display: none;
+  margin-top: 24px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.video-container {
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+video {
+  width: 100%;
+  display: block;
+  background: #000;
+  border-radius: 12px;
+}
+
+.download-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn-download {
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.no-wm {
+  background: var(--accent);
+}
+
+.no-wm:hover {
+  background: #6a4bac;
+}
+
+.original {
+  background: var(--secondary);
+}
+
+.original:hover {
+  background: #1cd8d8;
+}
+
+/* Instructions */
+.instructions {
+  margin-top: 30px;
+  padding: 20px;
+  background: var(--gray);
+  border-radius: 12px;
+}
+
+.instructions h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.instructions ol {
+  padding-left: 22px;
+  margin-bottom: 16px;
+}
+
+.instructions li {
+  margin-bottom: 10px;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 8px 0;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  font-size: 0.9rem;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    border-radius: 12px;
+  }
+  
+  .download-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  button, .btn-download {
+    padding: 12px;
+  }
+}
